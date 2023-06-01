@@ -6,5 +6,14 @@
 #include  "tree.h"
 
 std::vector<char> getPerm(const Tree& tree, int n) {
-  // напишите реализацию
+    std::vector<char> variable;
+    int size = tree.variable;
+    int fact = tree.n_fact;
+    if ((n <= fact) && (n > 0)) {
+        n = (n - 1) * size;
+        for (int item = 0; item < size; item++) {
+            variable.push_back(tree.data[n + item]);
+        }
+    }
+    return variable;
 }
