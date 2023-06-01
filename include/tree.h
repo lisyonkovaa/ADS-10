@@ -23,7 +23,7 @@ class Tree {
     int fact(int n) {
         int count = 1;
         for (int item = 2; item <= n; item++) {
-            count *= i;
+            count *= item;
         }
         return count;
     }
@@ -52,13 +52,13 @@ class Tree {
                        }
                     }
                     if (!in_item.empty()) {
-                        root->childs[i] = addChilds(root->childs[item], in_item);
+                        root->childs[item] = addChilds(root->childs[item], in_item);
                     }
                     for (int q = 0; q < in.size() - 1; q++) {
                         template_data.push_back(data[data.size() - 1]);
                         data.pop_back();
                     }
-                    data.push_back(in[i]);
+                    data.push_back(in[item]);
                     for (int q = 0; q < in.size() - 1; q++) {
                         data.push_back(template_data[template_data.size() - 1]);
                         template_data.pop_back();

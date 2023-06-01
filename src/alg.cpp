@@ -7,7 +7,7 @@
 
 std::vector<char> getPerm(const Tree& tree, int n) {
     std::vector<char> variable;
-    int size = tree.per_size;
+    int size = tree.variable;
     int fact = tree.n_fact;
     if ((n <= fact) && (n > 0)) {
         n = (n - 1) * size;
