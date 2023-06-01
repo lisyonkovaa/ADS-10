@@ -28,7 +28,7 @@ class Tree {
         return count;
     }
 
-    Tree(std::vector<char> in): root(nullptr), n_fact(0), variable(0) {
+    explicit Tree(std::vector<char> in): root(nullptr), n_fact(0), variable(0) {
         if (root) {
             throw std::string("Error!");
         } else {
@@ -52,7 +52,8 @@ class Tree {
                        }
                     }
                     if (!in_item.empty()) {
-                        root->childs[item] = addChilds(root->childs[item], in_item);
+                        root->childs[item] = 
+                        addChilds(root->childs[item], in_item);
                     }
                     for (int q = 0; q < in.size() - 1; q++) {
                         template_data.push_back(data[data.size() - 1]);
