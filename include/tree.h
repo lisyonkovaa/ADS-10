@@ -52,7 +52,7 @@ class Tree {
                        }
                     }
                     if (!in_item.empty()) {
-                        root->childs[item] = 
+                        root->childs[item] = \
                         addChilds(root->childs[item], in_item);
                     }
                     for (int q = 0; q < in.size() - 1; q++) {
